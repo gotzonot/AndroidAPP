@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "771372099115",
+    "firebase_url": "https://esn-bilbao.firebaseio.com",
+    "project_id": "esn-bilbao",
+    "storage_bucket": "esn-bilbao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771372099115:android:d6df0f534bc164aeb56c6e",
+        "android_client_info": {
+          "package_name": "com.example.esnbilbao1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771372099115-kolhpqrrv06guk1g4qhpe6riln6gek16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNx4a_kwadfROGDPV-E8LJ1FY2MFycPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771372099115-kolhpqrrv06guk1g4qhpe6riln6gek16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771372099115:android:133e9b65354d5f26b56c6e",
+        "android_client_info": {
+          "package_name": "com.example.esnbilbao2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771372099115-kolhpqrrv06guk1g4qhpe6riln6gek16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNx4a_kwadfROGDPV-E8LJ1FY2MFycPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771372099115-kolhpqrrv06guk1g4qhpe6riln6gek16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771372099115:android:24739bc413b11ffdb56c6e",
+        "android_client_info": {
+          "package_name": "com.example.esnbilbo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771372099115-plvmhvuf2n0pvut7q2fpqp3pr5s5fa6n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.esnbilbo",
+            "certificate_hash": "fa1c7d80088d06a5c2e6edfd44cdc399e4de1c57"
+          }
+        },
+        {
+          "client_id": "771372099115-kolhpqrrv06guk1g4qhpe6riln6gek16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNx4a_kwadfROGDPV-E8LJ1FY2MFycPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771372099115-kolhpqrrv06guk1g4qhpe6riln6gek16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

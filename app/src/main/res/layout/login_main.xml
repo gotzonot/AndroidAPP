@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="">
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_contact_password_login_activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_login_sequerly"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+
+                <EditText
+                    android:id="@+id/edit_text_contact_login_main"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_weight="2"
+                    android:layout_marginTop="140dp"
+                    android:drawablePadding="10dp"
+                    android:hint="ESNcard"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:elevation="600dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/button_login_login_main_activity"
+            android:layout_width="204dp"
+            android:layout_height="33dp"
+            android:layout_below="@+id/linear_layout_contact_password_login_activity_main"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/login_button"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:text="Login"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_forgotten_password_login_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_login_login_main_activity"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="25dp">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/relative_layout_different_sign_in_option_stream_main_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_layout_forgotten_password_login_main"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_view_facebook_login_option_activity_login_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--                android:src="@drawable/logoesn1"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--  android:text="|"
+              android:textSize="35dp" -->
+
+            <ImageView
+                android:id="@+id/image_view_google_login_option_activity_login_main"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp" />
+            <!--                android:src="@drawable/google" -->
+
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/letras"
+            android:elevation="600dp"/>
+        <TextView
+            android:id="@+id/text_view_login_sequerly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:elevation="600dp"
+            android:text="ERASMUN STUDENT NETWORK" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/fotoesn"
+            android:elevation="600dp"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="300dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/contacto"
+            android:elevation="600dp"/>
+
+        <TextView
+            android:id="@+id/text_view_forgotten_password_login_main_activity"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_login_login_main_activity"
+            android:layout_marginTop="86dp"
+            android:gravity="center"
+            android:textColor="@color/light_black"
+            android:text="Contact Form"
+            android:elevation="600dp"
+            android:textSize="19dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="947dp"
+
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="454dp"
+            app:srcCompat="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="947dp"
+
+
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="-270dp"
+            app:srcCompat="@drawable/cuadrado" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_view_close_login_activity_login_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+    <!--android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:src="@drawable/ic_close_black_24dp" -->
+
+
+
+
+
+</RelativeLayout>
