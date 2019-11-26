@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v == textViewForgottenPassword) {
             Intent intent = new Intent(MainActivity.this, events_activity.class);
             //Al estar en el MainActivity y al hacer click en el texto de textViewForgottenPassword
-         //  cambiamos a la actividad events_activity
+         //  cambiamos a la actividad events_activity.
             intent.putExtra("EXTRA", "0");
             startActivity(intent);
             finish();
