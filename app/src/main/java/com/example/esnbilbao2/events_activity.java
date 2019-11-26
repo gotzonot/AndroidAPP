@@ -26,6 +26,7 @@ public class events_activity extends AppCompatActivity {
     private EditText mEditTextEmail;
     private EditText mEditTextPass;
     private Button mbntReg;
+    private Button mbntSendLogin;
 
     //Variables
 

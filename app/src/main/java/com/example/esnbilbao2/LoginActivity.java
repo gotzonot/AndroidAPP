@@ -3,34 +3,67 @@ package com.example.esnbilbao2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginActivity extends AppCompatActivity  implements View.OnClickListener {
-    private TextView  textViewForgottenPassword;
+
+public class LoginActivity extends AppCompatActivity {
+    private EditText mEditTextEmail;
+    private EditText mEditTextPass;
+    private Button mbntLogin;
+
+    private String email = "";
+    private String password ="";
+
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_main);
-        getIdForVariables();
-        textViewForgottenPassword.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        mEditTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        mEditTextPass =  (EditText) findViewById(R.id.editTextPass);
+        mbntLogin = (Button) findViewById(R.id.bntLogin);
+
+
+        mbntLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            email = mEditTextEmail.getText().toString();
+            password = mEditTextPass.getText().toString();
+
+
+            if (!email.isEmpty()&& !password.isEmpty()){
+                loginUser();
+            } else {
+                Toast.makeText(LoginActivity.this, "Completa los campos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
-private void getIdForVariables() {
 
-
-    textViewForgottenPassword = findViewById(R.id.text_view_forgotten_password_login_main_activity);
-
-
-}
-    public void onClick(View v) {
-        if (v == textViewForgottenPassword) {
-            Intent intent = new Intent(LoginActivity.this, ContactForm.class);
-            intent.putExtra("EXTRA", "0");
-            startActivity(intent);
-        }
+    private void loginUser(){
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Error al tratar de iniciar sesión", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
-
-
 }

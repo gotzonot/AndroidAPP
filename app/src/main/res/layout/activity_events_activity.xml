@@ -42,5 +42,14 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextPass"
         tools:layout_editor_absoluteX="49dp" />
 
+    <Button
+        android:id="@+id/bntReg2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:text="Ya tengo cuenta"
+        app:layout_constraintTop_toBottomOf="@+id/bntReg"
+        tools:layout_editor_absoluteX="-16dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
