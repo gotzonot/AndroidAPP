@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //Al estar en el MainActivity y al hacer click en el texto de textViewForgottenPassword
          //  cambiamos a la actividad events_activity.
             intent.putExtra("EXTRA", "0");
-            startActivity(intent);
-            finish();
+            startActivity(intent); //Iniciamos la siguente ventana.
+            finish(); // Finalizamos esta ventana, así evitamos que cuando trate de retroceder vuelva a ella.
         }
     }
 
