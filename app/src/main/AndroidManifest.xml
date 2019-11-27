@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".events_activity" />
         <activity android:name=".ContactForm" />
         <activity

@@ -39,6 +39,7 @@ public class events_activity extends AppCompatActivity {
     DatabaseReference mDatabase;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events_activity);
@@ -49,10 +50,11 @@ public class events_activity extends AppCompatActivity {
 
 
 
-        mEditTextName = (EditText) findViewById(R.id.editTextName);
-        mEditTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        mEditTextPass =  (EditText) findViewById(R.id.editTextPass);
-        mbntReg = (Button) findViewById(R.id.bntReg);
+        mEditTextName = findViewById(R.id.editTextName);
+        mEditTextEmail = findViewById(R.id.editTextEmail);
+        mEditTextPass =  findViewById(R.id.editTextPass);
+        mbntReg = findViewById(R.id.bntReg);
+        mbntSendLogin = findViewById(R.id.bntSendLogin);
 
         mbntReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +64,8 @@ public class events_activity extends AppCompatActivity {
                 password = "123456";
                 password = password.toString();
 
-                if (!name.isEmpty()&&!email.isEmpty()&&!password.isEmpty()){
+
+                if (!name.isEmpty()&&!email.isEmpty()){
 
                     if (password.length() >=6){
 
@@ -71,10 +74,26 @@ public class events_activity extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(events_activity.this, "Debe tener una contraseña con almenos 6 caracteres", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
+
+        mbntSendLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(events_activity.this, LoginActivity.class));
+                finish();
+            }
+        });
+    }
+
+    protected void OnStart(){
+        super.onStart();
+
+        if (mAuth.getCurrentUser() != null){
+            startActivity(new Intent(events_activity.this, ProfileActivity.class));
+            finish();
+        }
     }
 
     private void registeruser(){
@@ -105,6 +124,9 @@ public class events_activity extends AppCompatActivity {
                 }
             }
         });
+
     }
+
+
 
 }
