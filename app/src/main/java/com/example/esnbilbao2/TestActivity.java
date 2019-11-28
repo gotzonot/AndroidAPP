@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class events_activity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity {
     private EditText mEditTextName;
     private EditText mEditTextEmail;
     private EditText mEditTextPass;
@@ -72,7 +72,7 @@ public class events_activity extends AppCompatActivity {
                     registeruser();
 
                 } else {
-                    Toast.makeText(events_activity.this, "Debe tener una contraseña con almenos 6 caracteres", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TestActivity.this, "Debe tener una contraseña con almenos 6 caracteres", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -80,7 +80,7 @@ public class events_activity extends AppCompatActivity {
         mbntSendLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(events_activity.this, LoginActivity.class));
+                startActivity(new Intent(TestActivity.this, LoginActivity.class));
                 finish();
             }
         });
@@ -90,7 +90,7 @@ public class events_activity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (mAuth.getCurrentUser() != null){
-            startActivity(new Intent(events_activity.this, ProfileActivity.class));
+            startActivity(new Intent(TestActivity.this, ProfileActivity.class));
             finish();
         }
     }
@@ -112,16 +112,16 @@ public class events_activity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if (task2.isSuccessful()){
-                                startActivity(new Intent(events_activity.this, ProfileActivity.class));
+                                startActivity(new Intent(TestActivity.this, ProfileActivity.class));
                                 finish();
                             }
                             else {
-                                Toast.makeText(events_activity.this, "Error Nº5", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TestActivity.this, "Error Nº5", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                 } else {
-                    Toast.makeText(events_activity.this, "No se ha podido registrar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TestActivity.this, "No se ha podido registrar", Toast.LENGTH_SHORT).show();
                 }
             }
         });
