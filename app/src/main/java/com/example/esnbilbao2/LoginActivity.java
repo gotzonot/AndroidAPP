@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         mbntLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            email = mEditTextEmail.getText().toString();
+            email = mEditTextEmail.getText().toString()+"gmail.com";
             password = mEditTextPass.getText().toString();
 
 
